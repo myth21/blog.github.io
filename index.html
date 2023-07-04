@@ -10,11 +10,18 @@ hi from index.html
 
   <script>
   
-  try {
-    await fetch('https://share-content.top/api/v1/media/');
-  } catch(err) {
-    alert(err); // Failed to fetch
-  }
+    async function submit() {
+        try {
+            let response = await fetch('https://share-content.top/api/v1/media/');
+            // сервер ответит подтверждением и размером изображения
+            let result = await response.json();
+            console.log(result);
+        } catch(err) {
+            alert(err); // Failed to fetch
+        }
+    }
+
+    submit();
 
 </script>
   
