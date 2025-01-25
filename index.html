@@ -12,8 +12,7 @@ hi from index.html
   
     async function submit() {
         try {
-            let response = await fetch('https://share-content.top/api/v1/media/');
-            // сервер ответит подтверждением и размером изображения
+            let response = await fetch('https://example.com/');
             let result = await response.json();
             console.log(result);
         } catch(err) {
